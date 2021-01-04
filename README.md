@@ -31,3 +31,43 @@ Query 1
  •	This query shows the customer’s city and state.
  
  •	It is important to know the customer’s location in the database.
+ 
+ • SELECT DISTINCT customer_id , customer_city, customer_state
+   FROM customers;
+
+
+Query 2
+
+•	This query shows the duplicate record of order and customer.
+
+•	This is important to know the duplication of record.
+
+•	SELECT
+    order_id, customer_id, COUNT(*)
+FROM
+    orders
+GROUP BY
+    order_id, customer_id
+HAVING 
+    COUNT(*) > 1
+
+Query 3 
+
+•	This query shows the total sum of payments.
+
+•	To know total payments.
+
+• SELECT SUM(payment_value)
+  FROM order_payments;
+
+Query 4
+•	This query show what review id and order id has a Null in the review comment title and review comment message.
+
+•	It helps to determine NULL in the values.
+•	SELECT review_id, order_id
+  FROM order_reviews
+  WHERE review_comment_title && review_comment_message IS NULL
+
+
+
+
