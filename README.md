@@ -70,7 +70,7 @@ HAVING
   FROM order_reviews
   WHERE review_comment_title && review_comment_message IS NULL
   
-  ##Query 5
+  ## Query 5
   
 •	This query selects records that have matching values in both tables.
 
