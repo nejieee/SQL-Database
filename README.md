@@ -133,6 +133,19 @@ Query 8
        FROM order_payments
        ORDER BY payment_value;
 
+ Query 11
+ 
+ •	The BETWEEN operator selects values within a given range. The values can be numbers, text, or dates.
+
+ •	This query used s used to compare a range of values.
+ 
+ •	SELECT order_id , product_id , seller_id
+FROM order_items
+WHERE shipping_limit_date BETWEEN '2017-01-01' AND '2017-12-31'
+
+
+
+
 
 
 
