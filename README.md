@@ -24,3 +24,8 @@ This dataset was generously provided by Olist, the largest department store in B
 ##  Database Dependency Diagram
 ![Data_Dependency_Diagram](https://user-images.githubusercontent.com/72763859/103567371-a6adcd80-4efe-11eb-9c25-26ba93d8e239.png)
 
+## SQL queries
+
+Query 1
+ •	This query shows the customer’s city and state.
+ •	It is important to know the customer’s location in the database.
