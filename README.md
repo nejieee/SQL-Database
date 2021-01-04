@@ -64,9 +64,77 @@ Query 4
 •	This query show what review id and order id has a Null in the review comment title and review comment message.
 
 •	It helps to determine NULL in the values.
+
 •	SELECT review_id, order_id
   FROM order_reviews
   WHERE review_comment_title && review_comment_message IS NULL
+  
+  Query 5
+•	This query selects records that have matching values in both tables.
+
+•	It shows the record of joining two tables.
+
+•	SELECT customers.customer_id, customers.customer_unique_id, customers.customer_city
+FROM customers
+INNER JOIN orders ON customers.customer_id = orders.customer_id
+ORDER BY orders.order_status;
+
+Query 6
+•	The operator OR displays a record if any of the conditions separated by OR is TRUE.
+
+•	It is used to combine multiple conditions
+
+•	SELECT payment_type
+ FROM order_payments
+ WHERE payment_type='voucher' OR payment_type='credit_card';
+ 
+ Query 7
+ 
+•	The AND operator displays a record if all the conditions separated by AND are TRUE.
+
+•	It is used for combining more than one condition together.
+
+•	SELECT customer_id
+FROM customers
+WHERE customer_city='sao paulo' AND customer_state='SP';
+
+Query 8
+
+•	This query count those records where record review field holds duplicate/triplicates (or more) data.
+
+•	It helps to count duplicate data in specific table. 
+
+•	SELECT review_id, COUNT( review_score ) x
+ FROM order_reviews
+ GROUP BY review_score
+ HAVING x >1
+ 
+ Query 9
+ 
+ •	This query assigns a rank to each row within a partition of a result set.
+ 
+ •	It helps to rank each row.
+ 
+ •	SELECT order_id,
+       payment_type,
+       payment_value,
+       ROW_NUMBER() OVER(ORDER BY payment_value)
+       RowNumber
+       FROM order_payments
+
+  Query 10
+  
+•	It distributes rows of an ordered partition into a specified number of approximately equal groups, or buckets.
+
+•	It assigns each group a bucket number starting from one
+
+•	SELECT payment_value, 
+       NTILE(3) OVER(ORDER BY payment_value DESC) Rank
+       FROM order_payments
+       ORDER BY payment_value;
+
+
+
 
 
 
