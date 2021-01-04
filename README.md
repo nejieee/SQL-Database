@@ -143,6 +143,15 @@ Query 8
 FROM order_items
 WHERE shipping_limit_date BETWEEN '2017-01-01' AND '2017-12-31'
 
+ Query 12
+ 
+•	The LIKE operator is used in a WHERE clause to search for a specified pattern in a column.
+
+•	It is used to find matches between a character string and a specified pattern.
+
+•	SELECT *
+FROM customers
+WHERE customer_city LIKE 'chapeco%' ORDER BY customer_id
 
 
 
