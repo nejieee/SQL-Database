@@ -22,4 +22,5 @@ This dataset was generously provided by Olist, the largest department store in B
 8. Product Category - Translates the productcategoryname to english.
 
 ##  Database Dependency Diagram
+![Data_Dependency_Diagram](https://user-images.githubusercontent.com/72763859/103567371-a6adcd80-4efe-11eb-9c25-26ba93d8e239.png)
 
