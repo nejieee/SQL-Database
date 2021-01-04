@@ -27,5 +27,7 @@ This dataset was generously provided by Olist, the largest department store in B
 ## SQL queries
 
 Query 1
+
  •	This query shows the customer’s city and state.
+ 
  •	It is important to know the customer’s location in the database.
